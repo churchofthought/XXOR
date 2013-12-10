@@ -5,23 +5,34 @@ XXOR
 
 Usage: OR(a,b,...)
 
- Examples Below:
-   NSLog(@"%@", OR(nil,@"", @0, @{@"foo": @"bar"}, @[]));
-   // outputs {foo = bar;}
+Examples Below
 ====
 
-   NSLog(@"%@", OR(nil,@"", @0, @[], @"", [NSNull null]));
-   // outputs <null>
 
-====
-   NSLog(@"%@", OR(nil,[NSNull null], @0, @[], @"foo", @"", @"bar"));
-   // outputs "foo"
 
-====
-   int x = 10;
-   NSLog(@"%f", (float) OR(false, x, 5, 2));
-   // outputs 10.0
-====
+ 
+       NSLog(@"%@", OR(nil,@"", @0, @{@"foo": @"bar"}, @[]));
+   
+   outputs {foo = bar;}
+   
+----
 
-   NSLog(@"%s", OR("", "foo", "bar"));
-   // outputs foo
+       NSLog(@"%@", OR(nil,@"", @0, @[], @"", [NSNull null]));
+   outputs <null>
+    
+----  
+   
+       NSLog(@"%@", OR(nil,[NSNull null], @0, @[], @"foo", @"", @"bar"));
+   outputs "foo"
+   
+----
+
+
+       int x = 10;
+       NSLog(@"%f", (float) OR(false, x, 5, 2));
+   outputs 10.0
+   
+----
+
+       NSLog(@"%s", OR("", "foo", "bar"));
+   outputs foo
